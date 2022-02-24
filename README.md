@@ -1,1 +1,0 @@
-# BuilderTrend-Text-Extraction

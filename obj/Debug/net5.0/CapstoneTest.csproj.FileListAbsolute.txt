@@ -1,5 +1,0 @@
-C:\Users\jakek\RiderProjects\CapstoneTest\CapstoneTest\obj\Debug\net5.0\CapstoneTest.csproj.AssemblyReference.cache
-C:\Users\jakek\RiderProjects\CapstoneTest\CapstoneTest\obj\Debug\net5.0\CapstoneTest.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jakek\RiderProjects\CapstoneTest\CapstoneTest\obj\Debug\net5.0\CapstoneTest.AssemblyInfoInputs.cache
-C:\Users\jakek\RiderProjects\CapstoneTest\CapstoneTest\obj\Debug\net5.0\CapstoneTest.AssemblyInfo.cs
-C:\Users\jakek\RiderProjects\CapstoneTest\CapstoneTest\obj\Debug\net5.0\CapstoneTest.csproj.CoreCompileInputs.cache
