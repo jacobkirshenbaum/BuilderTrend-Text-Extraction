@@ -3,17 +3,17 @@ using TikaOnDotNet.TextExtraction;
 using Nest;
 
 
-namespace TestProgram
+namespace Capstone
 {
     class ToolTest
     {
 
         public static ElasticClient Client()
         {
-            var settings = new ConnectionSettings(new Uri("http://localhost:9200"))  
-                .EnableDebugMode()
-                .DisableDirectStreaming()
-                .DefaultIndex("files");                                               
+            var settings = new ConnectionSettings()
+                .PrettyJson()
+                .ThrowExceptions(alwaysThrow: true)
+                .DefaultMappingFor<Doc>(m => m.IndexName("files"));                                               
             return new ElasticClient(settings);                                 
         }
 
@@ -25,7 +25,7 @@ namespace TestProgram
         public static async void indexDocs()
         {
             var textExtractor = new TextExtractor();
-            var directory = new DirectoryInfo("C:\\Users\\jakek\\Desktop\\CapTest\\TestFiles");
+            var directory = new DirectoryInfo("C:\\Users\\jakek\\RiderProjects\\Capstone\\TestFiles");
             var es = Client();
             if (directory.Exists)
             {
@@ -43,10 +43,9 @@ namespace TestProgram
             }
         }
         
-        public static void Main(string[] args)
+        static void Main(string[] args)
         {
             indexDocs();
-            
             var searchResponse = Client().Search<Doc>(search => search
                 .AllIndices()
                 .From(0)
@@ -58,7 +57,7 @@ namespace TestProgram
                     )
                 )  
             );
-            if (!searchResponse.IsValid)
+            /*if (!searchResponse.IsValid)
             {
                 Console.WriteLine(searchResponse.DebugInformation);
                 //Console.WriteLine(searchResponse.ServerError.Error);
@@ -68,7 +67,7 @@ namespace TestProgram
             foreach (var doc in docs)
             {
                 Console.WriteLine("TESTING " + doc.FileName);
-            }  
+            }  */
         }
     }
 
