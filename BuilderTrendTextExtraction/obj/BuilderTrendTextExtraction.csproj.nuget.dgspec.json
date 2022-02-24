@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakek\\RiderProjects\\Capstone\\Capstone\\Capstone.csproj": {}
+    "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakek\\RiderProjects\\Capstone\\Capstone\\Capstone.csproj": {
+    "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakek\\RiderProjects\\Capstone\\Capstone\\Capstone.csproj",
-        "projectName": "Capstone",
-        "projectPath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\Capstone\\Capstone.csproj",
+        "projectUniqueName": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj",
+        "projectName": "BuilderTrendTextExtraction",
+        "projectPath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj",
         "packagesPath": "C:\\Users\\jakek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\Capstone\\obj\\",
+        "outputPath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jakek\\AppData\\Roaming\\NuGet\\NuGet.Config"

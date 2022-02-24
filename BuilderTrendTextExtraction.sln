@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone", "Capstone\Capstone.csproj", "{D0767C4C-B5A7-4539-8492-84D48CF1166C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderTrendTextExtraction", "BuilderTrendTextExtraction\BuilderTrendTextExtraction.csproj", "{D0767C4C-B5A7-4539-8492-84D48CF1166C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
