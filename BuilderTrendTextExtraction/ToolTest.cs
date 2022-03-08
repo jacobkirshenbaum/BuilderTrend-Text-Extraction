@@ -1,4 +1,7 @@
 ﻿// Class for testing out tools
+
+using System.Security.Cryptography.X509Certificates;
+using Elasticsearch.Net;
 using TikaOnDotNet.TextExtraction;
 using Nest;
 
@@ -7,26 +10,26 @@ namespace Capstone
 {
     class ToolTest
     {
-
+        private static IElasticClient _client;
         public static ElasticClient Client()
         {
-            var settings = new ConnectionSettings()
-                .PrettyJson()
-                .ThrowExceptions(alwaysThrow: true)
-                .DefaultMappingFor<Doc>(m => m.IndexName("files"));                                               
+            var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
+                .DefaultIndex("docs")
+                .BasicAuthentication("elastic", "T3qU2DkD8SSn_4nEC3Uc")
+                .ServerCertificateValidationCallback(CertificateValidations.AuthorityIsRoot(new X509Certificate("C:\\Users\\jakek\\http_ca.crt")))
+                .DefaultMappingFor<Doc>(doc => doc.IndexName("docs"));
             return new ElasticClient(settings);                                 
         }
 
         public static async Task Index(Doc doc)
         {
-            await Client().IndexDocumentAsync(doc);
+            await _client.IndexDocumentAsync(doc);
         }
 
         public static async void indexDocs()
         {
             var textExtractor = new TextExtractor();
             var directory = new DirectoryInfo("C:\\Users\\jakek\\RiderProjects\\Capstone\\TestFiles");
-            var es = Client();
             if (directory.Exists)
             {
                 foreach (var file in directory.GetFiles())
@@ -38,25 +41,20 @@ namespace Capstone
                         Path = file.FullName,
                         Text = contents.Text
                     };
-                    await Index(document);
+                    _client.IndexDocument(document);
                 }
             }
         }
         
         static void Main(string[] args)
         {
+            _client = Client();
             indexDocs();
-            var searchResponse = Client().Search<Doc>(search => search
-                .AllIndices()
-                .From(0)
-                .Size(10)
+            var searchResponse = _client.Search<Doc>(search => search
                 .Query(query => query
-                    .Match(match => match
-                        .Field(field => field.FileName)
-                        .Query("Project Plan.docx")
-                    )
-                )  
-            );
+                    .MatchAll()));
+            
+            Console.WriteLine(searchResponse.Documents.Count);
             /*if (!searchResponse.IsValid)
             {
                 Console.WriteLine(searchResponse.DebugInformation);

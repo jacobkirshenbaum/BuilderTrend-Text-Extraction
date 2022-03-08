@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.8": {
+      "Docker.DotNet/3.125.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Buffers": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Docker.DotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Docker.DotNet.dll": {}
+        }
+      },
       "Elasticsearch.Net/7.17.0": {
         "type": "package",
         "dependencies": {
@@ -201,6 +215,15 @@
         },
         "runtime": {
           "lib/net461/Nest.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -1011,6 +1034,21 @@
           }
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "System.Web.Services.Description/4.9.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1093,6 +1131,20 @@
       }
     },
     ".NETFramework,Version=v4.8/win7-x86": {
+      "Docker.DotNet/3.125.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Buffers": "4.5.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "compile": {
+          "lib/netstandard2.0/Docker.DotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Docker.DotNet.dll": {}
+        }
+      },
       "Elasticsearch.Net/7.17.0": {
         "type": "package",
         "dependencies": {
@@ -1280,6 +1332,15 @@
         },
         "runtime": {
           "lib/net461/Nest.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -1950,6 +2011,21 @@
           "runtimes/win/lib/net461/System.Threading.AccessControl.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "System.Web.Services.Description/4.9.0": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2033,6 +2109,21 @@
     }
   },
   "libraries": {
+    "Docker.DotNet/3.125.5": {
+      "sha512": "1tClPIBzz/7HP1XejCdTiRMviVRtS14omyRhHD0R6086woRRBCh61hJeVrpL6CVTnsRui4X9qaI8wO8xOCqKkQ==",
+      "type": "package",
+      "path": "docker.dotnet/3.125.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "docker.dotnet.3.125.5.nupkg.sha512",
+        "docker.dotnet.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/Docker.DotNet.dll",
+        "lib/netstandard2.0/Docker.DotNet.pdb"
+      ]
+    },
     "Elasticsearch.Net/7.17.0": {
       "sha512": "SLySFNBBUjlDxx0GDWgiq0yJ208mCXt37BgvwZ7ZsRdhoWZVmTrro6D9/+KDbu9VXknbRCRUS+QI0C1kaCN3cg==",
       "type": "package",
@@ -2306,6 +2397,37 @@
         "nest.7.17.0.nupkg.sha512",
         "nest.nuspec",
         "nuget-icon.png"
+      ]
+    },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -4285,6 +4407,43 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Web.Services.Description/4.9.0": {
       "sha512": "d20B3upsWddwSG5xF3eQLs0cAV3tXDsBNqP4kh02ylfgZwqfpf4f/9KiZVIGIoxULt2cKqxWs+U4AdNAJ7L8cQ==",
       "type": "package",
@@ -4345,6 +4504,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.8": [
+      "Docker.DotNet >= 3.125.5",
       "Microsoft.Windows.Compatibility >= 6.0.2-mauipre.1.22054.8",
       "NEST >= 7.17.0",
       "System.Configuration.ConfigurationManager >= 6.0.2-mauipre.1.22054.8",
@@ -4390,6 +4550,10 @@
       "net48": {
         "targetAlias": "net48",
         "dependencies": {
+          "Docker.DotNet": {
+            "target": "Package",
+            "version": "[3.125.5, )"
+          },
           "Microsoft.Windows.Compatibility": {
             "target": "Package",
             "version": "[6.0.2-mauipre.1.22054.8, )"

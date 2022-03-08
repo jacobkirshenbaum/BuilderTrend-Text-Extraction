@@ -93,3 +93,6 @@ C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction.csproj.CopyComplete
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction.exe
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction.pdb
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Docker.DotNet.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Newtonsoft.Json.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\System.Threading.Tasks.Extensions.dll

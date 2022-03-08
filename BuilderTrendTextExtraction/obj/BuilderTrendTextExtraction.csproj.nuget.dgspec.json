@@ -38,6 +38,10 @@
         "net48": {
           "targetAlias": "net48",
           "dependencies": {
+            "Docker.DotNet": {
+              "target": "Package",
+              "version": "[3.125.5, )"
+            },
             "Microsoft.Windows.Compatibility": {
               "target": "Package",
               "version": "[6.0.2-mauipre.1.22054.8, )"
