@@ -15,7 +15,7 @@ namespace Capstone
         {
             var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
                 .DefaultIndex("docs")
-                .BasicAuthentication("elastic", "T3qU2DkD8SSn_4nEC3Uc")
+                .BasicAuthentication("elastic", "sN=thGmjxItmOelacmvY")
                 .ServerCertificateValidationCallback(CertificateValidations.AuthorityIsRoot(new X509Certificate("C:\\Users\\jakek\\http_ca.crt")))
                 .DefaultMappingFor<Doc>(doc => doc.IndexName("docs"));
             return new ElasticClient(settings);                                 
@@ -46,7 +46,7 @@ namespace Capstone
             }
         }
         
-        static void Main(string[] args)
+        /*static void Main(string[] args)
         {
             _client = Client();
             indexDocs();
@@ -65,8 +65,8 @@ namespace Capstone
             foreach (var doc in docs)
             {
                 Console.WriteLine("TESTING " + doc.FileName);
-            }  */
-        }
+            }  
+        }*/
     }
 
     public class Doc
