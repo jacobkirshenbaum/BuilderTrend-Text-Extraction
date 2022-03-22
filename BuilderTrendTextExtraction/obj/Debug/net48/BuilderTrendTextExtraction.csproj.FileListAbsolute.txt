@@ -96,3 +96,8 @@ C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Docker.DotNet.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Newtonsoft.Json.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\System.Threading.Tasks.Extensions.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\UI\MainWindow.g.cs
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction_MarkupCompile.cache
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction_MarkupCompile.lref
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\UI\MainWindow.baml
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction.g.resources

@@ -17,7 +17,7 @@ using Nest;public class ElasticAccess
     {
         var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
             .DefaultIndex("files")
-            .BasicAuthentication("elastic", "sN=thGmjxItmOelacmvY")
+            .BasicAuthentication("elastic", "0PR9IVxdl0tuLlb-Nj0W")
             .ServerCertificateValidationCallback(
                 CertificateValidations.AuthorityIsRoot(new X509Certificate("C:\\Users\\jakek\\http_ca.crt")));
         return new ElasticClient(settings);                                 
@@ -38,7 +38,6 @@ using Nest;public class ElasticAccess
     {
         foreach (var file in files)
         {
-            Console.WriteLine(file.FileName);
             _client.IndexDocument(file);
         }
     }

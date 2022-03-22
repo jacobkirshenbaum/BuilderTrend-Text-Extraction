@@ -1,4 +1,6 @@
 ﻿// Class for processing files using Apache Tika
+
+using System.IO;
 using TikaOnDotNet.TextExtraction;
 
 public class FileProcessor

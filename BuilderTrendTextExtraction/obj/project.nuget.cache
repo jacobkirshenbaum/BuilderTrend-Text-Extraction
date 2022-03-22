@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pyjilfZRlnhvDuwL4aAErULxVQLFUE7e9e0DGx1D4NbDSO5WrEiM+jhtnFF2QlMdyQ6+4JCIr3AmgsjtTLeBog==",
+  "dgSpecHash": "SaJ+mdDiKaBwweBc//GPyhIUrlq+TMZaslkeg23s+NIwfR7ovV2TLqdW9fCjKTjIypT42I1eDDbMB5AbXmR4xA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\jakek\\.nuget\\packages\\elasticsearch.net\\7.17.0\\elasticsearch.net.7.17.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\ikvm\\8.1.5717\\ikvm.8.1.5717.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
+    "C:\\Users\\jakek\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\jakek\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net48\\1.0.2\\microsoft.netframework.referenceassemblies.net48.1.0.2.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.win32.registry.accesscontrol\\6.0.2-mauipre.1.22054.8\\microsoft.win32.registry.accesscontrol.6.0.2-mauipre.1.22054.8.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.2-mauipre.1.22054.8\\microsoft.win32.systemevents.6.0.2-mauipre.1.22054.8.nupkg.sha512",
