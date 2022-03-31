@@ -2,7 +2,12 @@
 using System.Security.Cryptography.X509Certificates;
 using Elasticsearch.Net;
 
-using Nest;public class ElasticAccess
+using Nest;
+using org.apache.log4j.lf5.viewer.configure;
+using System.Configuration;
+using ConfigurationManager = System.Configuration.ConfigurationManager;
+
+public class ElasticAccess
 {
     private IElasticClient _client;
     public ElasticAccess()
@@ -15,11 +20,9 @@ using Nest;public class ElasticAccess
      */
     public ElasticClient Client()
     {
-        var settings = new ConnectionSettings(new Uri("https://localhost:9200"))
+        var settings = new ConnectionSettings(new Uri(ConfigurationManager.AppSettings.Get("elastic.url")))
             .DefaultIndex("files")
-            .BasicAuthentication("elastic", "0PR9IVxdl0tuLlb-Nj0W")
-            .ServerCertificateValidationCallback(
-                CertificateValidations.AuthorityIsRoot(new X509Certificate("C:\\Users\\jakek\\http_ca.crt")));
+            .BasicAuthentication(ConfigurationManager.AppSettings.Get("elastic.user"), ConfigurationManager.AppSettings.Get("elastic.password"));
         return new ElasticClient(settings);                                 
     }
 

@@ -10,13 +10,13 @@ class Program
     [STAThread]
     static void Main(string[] args)
     {
-        FileProcessor processor = new();
-        ElasticAccess elastic = new();
-        List<File> files = processor.ReadFiles("..\\..\\..\\..\\TestFiles");
+        //FileProcessor processor = new();
+        //ElasticAccess elastic = new();
+        //List<File> files = processor.ReadFiles("..\\..\\..\\..\\TestFiles");
+        //elastic.IndexDocuemnts(files);
+        //elastic.DeleteAll();
         MainWindow main = new();
         Application app = new Application();
         app.Run(main);
-        //elastic.IndexDocuemnts(files);
-        //elastic.DeleteAll();
     }
 }
