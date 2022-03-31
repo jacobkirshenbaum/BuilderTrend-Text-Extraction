@@ -10,12 +10,14 @@
     </Window.CommandBindings>
     <Grid>
         <ListView Margin="60,40,0,0" Name="dataBinding"></ListView>
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,13,0,0"
-                   Text="Search Name"
-                   VerticalAlignment="Top" Width="134" />
-        <TextBox Height="27" HorizontalAlignment="Left" Margin="208,13,0,0"
+        <TextBox HorizontalAlignment="Left" Margin="60,13,0,0"
                  Name="txtNameToSearch"
                  VerticalAlignment="Top" Width="202" />
-        <Button Height="27" HorizontalAlignment="Left" Margin="450,13,0,0" VerticalAlignment="Top" Width="202" Command="ApplicationCommands.New" Cursor="Hand">Search</Button>
+        <ComboBox Height="27" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,7,0,0" Name="filter">
+            <ComboBoxItem>File Name</ComboBoxItem>
+            <ComboBoxItem>File Contents</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Both</ComboBoxItem>
+        </ComboBox>
+        <Button Height="27" HorizontalAlignment="Left" Margin="500,7,0,0" VerticalAlignment="Top" Width="202" Command="ApplicationCommands.New" Cursor="Hand">Search</Button>
     </Grid>
 </Window>

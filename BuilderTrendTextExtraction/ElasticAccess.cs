@@ -1,10 +1,7 @@
 ﻿// Access to Elasticsearch client and indexing files
-using System.Security.Cryptography.X509Certificates;
-using Elasticsearch.Net;
 
 using Nest;
-using org.apache.log4j.lf5.viewer.configure;
-using System.Configuration;
+
 using ConfigurationManager = System.Configuration.ConfigurationManager;
 
 public class ElasticAccess

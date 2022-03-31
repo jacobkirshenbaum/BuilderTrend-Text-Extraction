@@ -26,18 +26,41 @@ public partial class MainWindow : Window
 
     private void NewCommand_Executed(object sender, ExecutedRoutedEventArgs e)
     {
-        List<File> filesByName = elastic.SearchByName(txtNameToSearch.Text);
+        
         List<String> fileNames = new();
-        foreach (var file in filesByName)
+        if (filter.Text.Equals("File Name"))
         {
-            fileNames.Add(file.FileName);
-        }
-        List<File> filesByText = elastic.SearchByText(txtNameToSearch.Text);
-        foreach (var file in filesByText)
-        {
-            if (!fileNames.Contains(file.FileName))
+            List<File> filesByName = elastic.SearchByName(txtNameToSearch.Text);
+            foreach (var file in filesByName)
             {
                 fileNames.Add(file.FileName);
+            }
+        }
+        else if (filter.Text.Equals("File Contents"))
+        {
+            List<File> filesByText = elastic.SearchByText(txtNameToSearch.Text);
+            foreach (var file in filesByText)
+            {
+                if (!fileNames.Contains(file.FileName))
+                {
+                    fileNames.Add(file.FileName);
+                }
+            }
+        }
+        else
+        {
+            List<File> filesByName = elastic.SearchByName(txtNameToSearch.Text);
+            foreach (var file in filesByName)
+            {
+                fileNames.Add(file.FileName);
+            }
+            List<File> filesByText = elastic.SearchByText(txtNameToSearch.Text);
+            foreach (var file in filesByText)
+            {
+                if (!fileNames.Contains(file.FileName))
+                {
+                    fileNames.Add(file.FileName);
+                }
             }
         }
         dataBinding.ItemsSource = fileNames;

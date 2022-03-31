@@ -29,7 +29,6 @@ public class FileProcessor
                 {
                     ID = FileID.newId(),
                     FileName = file.Name,
-                    Path = file.FullName,
                     Text = contents.Text
                 };
                 files.Add(document);
