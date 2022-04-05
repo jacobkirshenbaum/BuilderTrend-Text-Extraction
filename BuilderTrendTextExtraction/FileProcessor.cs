@@ -2,6 +2,7 @@
 
 using System.IO;
 using TikaOnDotNet.TextExtraction;
+using Tesseract;
 
 public class FileProcessor
 {
@@ -22,16 +23,37 @@ public class FileProcessor
         _directoryInfo = new DirectoryInfo(filePath);
         if (_directoryInfo.Exists)
         {
+            var engine = new TesseractEngine(@"..\..\..\..\TrainingData\", "eng");
+            engine.SetVariable("user_defined_dpi", "70");
             foreach (var file in _directoryInfo.GetFiles())
             {
-                var contents = _textExtractor.Extract(file.FullName);
-                var document = new File()
+                if (file.Extension == ".jpg")
                 {
-                    ID = FileID.newId(),
-                    FileName = file.Name,
-                    Text = contents.Text
-                };
-                files.Add(document);
+                    using (var img = Pix.LoadFromFile(file.FullName))
+                    {
+                        using (var page = engine.Process(img))
+                        {
+                            var document = new File()
+                            {
+                                ID = FileID.newId(),
+                                FileName = file.Name,
+                                Text = page.GetText()
+                            };
+                            files.Add(document);
+                        }
+                    }
+                }
+                else
+                {
+                    var contents = _textExtractor.Extract(file.FullName);
+                    var document = new File()
+                    {
+                        ID = FileID.newId(),
+                        FileName = file.Name,
+                        Text = contents.Text
+                    };
+                    files.Add(document);
+                }
             }
         }
         return files;

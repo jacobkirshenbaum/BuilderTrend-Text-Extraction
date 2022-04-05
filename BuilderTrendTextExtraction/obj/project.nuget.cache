@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "guhHSaJN2P2netkQoPqEpC7LKz7uHeWqx8iS5J40j//Pvv5F1yKY541di5kHsYPJoRKCLTQ/3q1TRkRBIVEEpg==",
+  "dgSpecHash": "btllhzKwKJqbb4PurnoxNuubyJM3djma3p2pJoVEh7Bf/KzIL+r5ITb7QBFBHQE2GPpJN1dLtTUfR+tOxBevbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.windows.compatibility\\6.0.2-mauipre.1.22054.8\\microsoft.windows.compatibility.6.0.2-mauipre.1.22054.8.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\nest\\7.17.0\\nest.7.17.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\jakek\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\system.codedom\\6.0.2-mauipre.1.22054.8\\system.codedom.6.0.2-mauipre.1.22054.8.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\system.componentmodel.composition\\6.0.2-mauipre.1.22054.8\\system.componentmodel.composition.6.0.2-mauipre.1.22054.8.nupkg.sha512",
@@ -68,6 +69,7 @@
     "C:\\Users\\jakek\\.nuget\\packages\\system.threading.accesscontrol\\6.0.2-mauipre.1.22054.8\\system.threading.accesscontrol.6.0.2-mauipre.1.22054.8.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\system.web.services.description\\4.9.0\\system.web.services.description.4.9.0.nupkg.sha512",
+    "C:\\Users\\jakek\\.nuget\\packages\\tesseract\\4.1.1\\tesseract.4.1.1.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\tikaondotnet\\1.17.1\\tikaondotnet.1.17.1.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\tikaondotnet.textextractor\\1.17.1\\tikaondotnet.textextractor.1.17.1.nupkg.sha512"
   ],

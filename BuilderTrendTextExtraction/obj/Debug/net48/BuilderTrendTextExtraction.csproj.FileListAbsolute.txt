@@ -100,3 +100,9 @@ C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction_MarkupCompile.cache
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\UI\MainWindow.baml
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\obj\Debug\net48\BuilderTrendTextExtraction.g.resources
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\x86\leptonica-1.80.0.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\x86\tesseract41.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\x64\leptonica-1.80.0.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\x64\tesseract41.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Tesseract.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\nunit.framework.dll

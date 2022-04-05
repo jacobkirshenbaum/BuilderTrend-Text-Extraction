@@ -238,6 +238,18 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "NUnit/3.13.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1115,6 +1127,18 @@
           }
         }
       },
+      "Tesseract/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
+        }
+      },
       "TikaOnDotnet/1.17.1": {
         "type": "package",
         "dependencies": {
@@ -1365,6 +1389,18 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NUnit/3.13.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
         }
       },
       "System.Buffers/4.5.1": {
@@ -2102,6 +2138,18 @@
           "lib/netstandard2.0/zh-Hant/System.Web.Services.Description.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "Tesseract/4.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Tesseract.dll": {}
+        },
+        "build": {
+          "build/Tesseract.targets": {}
         }
       },
       "TikaOnDotnet/1.17.1": {
@@ -2843,6 +2891,30 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "NUnit/3.13.3": {
+      "sha512": "KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "type": "package",
+      "path": "nunit/3.13.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "icon.png",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.13.3.nupkg.sha512",
+        "nunit.nuspec"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -4890,6 +4962,26 @@
         "system.web.services.description.nuspec"
       ]
     },
+    "Tesseract/4.1.1": {
+      "sha512": "abufaW6N3P7TGJPI3RNTMSzS1ycnE1w6aW/Q+Hco/wCgm+bXUgR87JsGELvTcm2FISXGlQgs+PvYMVo9SlcPfg==",
+      "type": "package",
+      "path": "tesseract/4.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Tesseract.targets",
+        "lib/net40/Tesseract.dll",
+        "lib/net45/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.dll",
+        "lib/netstandard2.0/Tesseract.xml",
+        "tesseract.4.1.1.nupkg.sha512",
+        "tesseract.nuspec",
+        "x64/leptonica-1.80.0.dll",
+        "x64/tesseract41.dll",
+        "x86/leptonica-1.80.0.dll",
+        "x86/tesseract41.dll"
+      ]
+    },
     "TikaOnDotnet/1.17.1": {
       "sha512": "86DGfYa642cK/qGT3zy3FUZI1sfXpKTi52yU0UJhfYOw0JuWPMlpbvVU3KeJ1/sYSki2xtPLuk9ZAjSLz0M4rQ==",
       "type": "package",
@@ -4923,8 +5015,10 @@
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
       "Microsoft.Windows.Compatibility >= 6.0.2-mauipre.1.22054.8",
       "NEST >= 7.17.0",
+      "NUnit >= 3.13.3",
       "System.Configuration.ConfigurationManager >= 6.0.2-mauipre.1.22054.8",
       "System.Reflection.Emit >= 4.7.0",
+      "Tesseract >= 4.1.1",
       "TikaOnDotNet >= 1.17.1",
       "TikaOnDotnet.TextExtractor >= 1.17.1"
     ]
@@ -4986,6 +5080,10 @@
             "target": "Package",
             "version": "[7.17.0, )"
           },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.13.3, )"
+          },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[6.0.2-mauipre.1.22054.8, )"
@@ -4993,6 +5091,10 @@
           "System.Reflection.Emit": {
             "target": "Package",
             "version": "[4.7.0, )"
+          },
+          "Tesseract": {
+            "target": "Package",
+            "version": "[4.1.1, )"
           },
           "TikaOnDotNet": {
             "target": "Package",

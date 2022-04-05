@@ -1,3 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Int64 x:Key="/Default/Environment/Hierarchy/Build/BuildTool/MsbuildVersion/@EntryValue">1114112</s:Int64>
-	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\6.0.102\MSBuild.dll</s:String></wpf:ResourceDictionary>
+	<s:String x:Key="/Default/Environment/Hierarchy/Build/BuildTool/CustomBuildToolPath/@EntryValue">C:\Program Files\dotnet\sdk\6.0.102\MSBuild.dll</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1d15ff8c_002D37b1_002D425a_002Da0c4_002D865494de1adf/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TextExtractionTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.TextExtractionTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.FileTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.FileIDTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
