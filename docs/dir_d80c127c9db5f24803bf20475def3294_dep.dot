@@ -1,0 +1,11 @@
+digraph "obj/Release/net48/UI"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_fe57ed647a92d787ea9534b13cc4cf5b {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="net48", fontname="Helvetica", fontsize="10", URL="dir_fe57ed647a92d787ea9534b13cc4cf5b.html"]
+  dir_d80c127c9db5f24803bf20475def3294 [shape=box, label="UI", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_d80c127c9db5f24803bf20475def3294.html"];
+  }
+}
