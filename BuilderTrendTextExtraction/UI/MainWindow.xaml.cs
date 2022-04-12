@@ -1,11 +1,13 @@
 ﻿using System.Windows;
 using System.Windows.Input;
+using Microsoft.Win32;
 
 namespace Capstone.UI;
 
 public partial class MainWindow : Window
 {
     private ElasticAccess elastic = new();
+    private FileProcessor processor = new();
     
     public MainWindow()
     {
@@ -64,5 +66,17 @@ public partial class MainWindow : Window
             }
         }
         dataBinding.ItemsSource = fileNames;
+    }
+
+    private void openFileExplorer(object sender, RoutedEventArgs e)
+    {
+        OpenFileDialog openFileDialog = new();
+        openFileDialog.Multiselect = true;
+        if (openFileDialog.ShowDialog() == true)
+        {
+            var files = processor.ReadFile(openFileDialog.FileNames);
+            elastic.IndexDocuments(files);
+        }
+        MessageBox.Show("File(s) added");
     }
 }

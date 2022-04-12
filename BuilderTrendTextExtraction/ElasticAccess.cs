@@ -34,7 +34,7 @@ public class ElasticAccess
     /**
      * Indexes a list of files into Elasticsearch
      */
-    public void IndexDocuemnts(List<File> files)
+    public void IndexDocuments(List<File> files)
     {
         foreach (var file in files)
         {

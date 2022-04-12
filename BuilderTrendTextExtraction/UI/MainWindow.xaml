@@ -13,11 +13,12 @@
         <TextBox HorizontalAlignment="Left" Margin="60,13,0,0"
                  Name="txtNameToSearch"
                  VerticalAlignment="Top" Width="202" />
-        <ComboBox Height="27" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,7,0,0" Name="filter">
+        <ComboBox Height="27" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="275,7,0,0" Name="filter">
             <ComboBoxItem>File Name</ComboBoxItem>
             <ComboBoxItem>File Contents</ComboBoxItem>
             <ComboBoxItem IsSelected="True">Both</ComboBoxItem>
         </ComboBox>
-        <Button Height="27" HorizontalAlignment="Left" Margin="500,7,0,0" VerticalAlignment="Top" Width="202" Command="ApplicationCommands.New" Cursor="Hand">Search</Button>
+        <Button Height="27" HorizontalAlignment="Left" Margin="450,7,0,0" VerticalAlignment="Top" Width="150" Command="ApplicationCommands.New" Cursor="Hand">Search</Button>
+        <Button Height="27" HorizontalAlignment="Left" Margin="625,7,0,0" VerticalAlignment="Top" Width="150" Click="openFileExplorer" Cursor="Hand">Browse</Button>
     </Grid>
 </Window>
