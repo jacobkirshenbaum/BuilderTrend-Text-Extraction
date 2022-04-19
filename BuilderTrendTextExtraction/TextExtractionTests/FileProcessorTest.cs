@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.IO;
+using NUnit.Framework;
+using TikaOnDotNet.TextExtraction;
 
 namespace Capstone.TextExtractionTests;
 
@@ -18,4 +20,5 @@ public class TextExtractionTest
     {
         Assert.IsNotEmpty(_fileProcessor.ReadFiles(@"..\..\..\..\TestFiles"));
     }
+    
 }

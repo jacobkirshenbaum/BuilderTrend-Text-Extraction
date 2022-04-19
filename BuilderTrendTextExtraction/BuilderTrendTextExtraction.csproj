@@ -12,7 +12,10 @@
 
     <ItemGroup>
         <PackageReference Include="Docker.DotNet" Version="3.125.5" />
+        <PackageReference Include="Google.Apis.Auth" Version="1.57.0" />
+        <PackageReference Include="Google.Cloud.Storage.V1" Version="3.7.0" />
         <PackageReference Include="Microsoft.Windows.Compatibility" Version="6.0.2-mauipre.1.22054.8" />
+        <PackageReference Include="Microsoft.WindowsAPICodePack.Shell" Version="1.1.0" />
         <PackageReference Include="NEST" Version="7.17.0" />
         <PackageReference Include="NUnit" Version="3.13.3" />
         <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.2-mauipre.1.22054.8" />

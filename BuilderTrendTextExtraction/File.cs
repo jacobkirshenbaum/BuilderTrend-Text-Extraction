@@ -5,4 +5,10 @@ public class File
     public string? FileName { get; set; }
 
     public string? Text { get; set;  }
+    
+    public List<string>? Addresses { get; set; }
+    
+    public List<string>? PhoneNumbers { get; set; }
+    
+    public List<string>? Emails { get; set; }
 }

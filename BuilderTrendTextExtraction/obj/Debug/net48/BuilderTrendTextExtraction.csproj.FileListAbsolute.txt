@@ -106,3 +106,15 @@ C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\x64\tesseract41.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Tesseract.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\nunit.framework.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Api.Gax.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Api.Gax.Rest.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.PlatformServices.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.Auth.PlatformServices.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.Auth.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.Core.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Apis.Storage.v1.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Google.Cloud.Storage.V1.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.WindowsAPICodePack.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.WindowsAPICodePack.Shell.dll

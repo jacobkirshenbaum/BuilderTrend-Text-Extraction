@@ -1,7 +1,8 @@
 ﻿// Class for processing files using Apache Tika
 
 using System.IO;
-using org.jdom2;
+using System.Text.RegularExpressions;
+using Capstone.TextExtractionTests;
 using TikaOnDotNet.TextExtraction;
 using Tesseract;
 
@@ -9,10 +10,12 @@ public class FileProcessor
 {
     private TextExtractor _textExtractor;
     private DirectoryInfo _directoryInfo;
+    private GoogleStorage _googleStorage;
 
     public FileProcessor()
     {
         _textExtractor = new TextExtractor();
+        _googleStorage = new();
     }
 
     /**
@@ -38,8 +41,12 @@ public class FileProcessor
                             {
                                 ID = FileID.newId(),
                                 FileName = file.Name,
-                                Text = page.GetText()
+                                Text = page.GetText(),
+                                Addresses = getFilteredItems(page.GetText(), "address"),
+                                PhoneNumbers = getFilteredItems(page.GetText(), "phone"),
+                                Emails = getFilteredItems(page.GetText(), "email")
                             };
+                            _googleStorage.AddFile(file.FullName);
                             files.Add(document);
                         }
                     }
@@ -51,8 +58,12 @@ public class FileProcessor
                     {
                         ID = FileID.newId(),
                         FileName = file.Name,
-                        Text = contents.Text
+                        Text = contents.Text,
+                        Addresses = getFilteredItems(contents.Text, "address"),
+                        PhoneNumbers = getFilteredItems(contents.Text, "phone"),
+                        Emails = getFilteredItems(contents.Text, "email")
                     };
+                    _googleStorage.AddFile(file.FullName);
                     files.Add(document);
                 }
             }
@@ -80,8 +91,12 @@ public class FileProcessor
                         {
                             ID = FileID.newId(),
                             FileName = Path.GetFileName(filePath),
-                            Text = page.GetText()
+                            Text = page.GetText(),
+                            Addresses = getFilteredItems(page.GetText(), "address"),
+                            PhoneNumbers = getFilteredItems(page.GetText(), "phone"),
+                            Emails = getFilteredItems(page.GetText(), "email")
                         };
+                        _googleStorage.AddFile(filePath);
                         files.Add(document);
                     }
                 }
@@ -93,13 +108,41 @@ public class FileProcessor
                 {
                     ID = FileID.newId(),
                     FileName = Path.GetFileName(filePath),
-                    Text = contents.Text
-
+                    Text = contents.Text,
+                    Addresses = getFilteredItems(contents.Text, "address"),
+                    PhoneNumbers = getFilteredItems(contents.Text, "phone"),
+                    Emails = getFilteredItems(contents.Text, "email")
                 };
+                _googleStorage.AddFile(filePath);
                 files.Add(document);
             }
         }
         return files;
+    }
+
+    private List<string> getFilteredItems(string text, string filter)
+    {
+        List<string> items = new();
+        Regex regex = null;
+        switch (filter)
+        {
+            case "address":
+                regex = new Regex(RegexUtilities.Address, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                break;
+            case "email":
+                regex = new Regex(RegexUtilities.Email, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                break;
+            case "phone":
+                regex = new Regex(RegexUtilities.PhoneNumber, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                break;
+        }
+        MatchCollection matches = regex.Matches(text);
+        foreach (Match match in matches)
+        {
+            items.Add(match.Value);
+        }
+
+        return items;
     }
 
 }

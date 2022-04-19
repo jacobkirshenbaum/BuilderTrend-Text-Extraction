@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[3.125.5, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
+            "Google.Cloud.Storage.V1": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",
               "target": "Package",
@@ -53,6 +61,10 @@
             "Microsoft.Windows.Compatibility": {
               "target": "Package",
               "version": "[6.0.2-mauipre.1.22054.8, )"
+            },
+            "Microsoft.WindowsAPICodePack.Shell": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "NEST": {
               "target": "Package",

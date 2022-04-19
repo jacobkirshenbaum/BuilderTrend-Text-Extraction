@@ -13,7 +13,7 @@ class Program
         //FileProcessor processor = new();
         //ElasticAccess elastic = new();
         //List<File> files = processor.ReadFiles("..\\..\\..\\..\\TestFiles");
-        //elastic.IndexDocuemnts(files);
+        //elastic.IndexDocuments(files);
         //elastic.DeleteAll();
         MainWindow main = new();
         Application app = new Application();

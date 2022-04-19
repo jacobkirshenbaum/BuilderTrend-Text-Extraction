@@ -9,16 +9,25 @@
         <CommandBinding Command="ApplicationCommands.New" CanExecute="NewCommand_CanExecute" Executed="NewCommand_Executed"></CommandBinding>
     </Window.CommandBindings>
     <Grid>
-        <ListView Margin="60,40,0,0" Name="dataBinding"></ListView>
+        <ListView Margin="60,40,0,0" Name="dataBinding">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <EventSetter Event="MouseDoubleClick" Handler="OpenFile" />
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
         <TextBox HorizontalAlignment="Left" Margin="60,13,0,0"
                  Name="txtNameToSearch"
                  VerticalAlignment="Top" Width="202" />
         <ComboBox Height="27" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="275,7,0,0" Name="filter">
             <ComboBoxItem>File Name</ComboBoxItem>
             <ComboBoxItem>File Contents</ComboBoxItem>
-            <ComboBoxItem IsSelected="True">Both</ComboBoxItem>
+            <ComboBoxItem>Address</ComboBoxItem>
+            <ComboBoxItem>Phone Number</ComboBoxItem>
+            <ComboBoxItem>Email</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">All</ComboBoxItem>
         </ComboBox>
         <Button Height="27" HorizontalAlignment="Left" Margin="450,7,0,0" VerticalAlignment="Top" Width="150" Command="ApplicationCommands.New" Cursor="Hand">Search</Button>
-        <Button Height="27" HorizontalAlignment="Left" Margin="625,7,0,0" VerticalAlignment="Top" Width="150" Click="openFileExplorer" Cursor="Hand">Browse</Button>
+        <Button Height="27" HorizontalAlignment="Left" Margin="625,7,0,0" VerticalAlignment="Top" Width="150" Click="openFileExplorer" Cursor="Hand">Upload Files</Button>
     </Grid>
 </Window>

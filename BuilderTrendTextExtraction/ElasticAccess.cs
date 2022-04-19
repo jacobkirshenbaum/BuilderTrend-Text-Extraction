@@ -87,6 +87,60 @@ public class ElasticAccess
         );
         return searchResponse.Documents.ToList();
     }
+    
+    /**
+     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     */
+    public List<File> SearchByAddress(string text)
+    {
+        var addressList = text.Split(' ');
+        var searchResponse = _client.Search<File>(search => search
+            .Size(100)
+            .Query(query => +query
+                .Terms(t => t
+                    .Field(f => f
+                        .Addresses
+                    )
+                    .Terms(addressList)
+                )
+            )
+        );
+        return searchResponse.Documents.ToList();
+    }
+    
+    /**
+     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     */
+    public List<File> SearchByPhone(string text)
+    {
+        var searchResponse = _client.Search<File>(search => search
+            .Size(100)
+            .Query(query => query
+                .Match(match => match
+                    .Field(field => field.PhoneNumbers)
+                    .Query(text)
+                )
+            )
+        );
+        return searchResponse.Documents.ToList();
+    }
+    
+    /**
+     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     */
+    public List<File> SearchByEmail(string text)
+    {
+        var searchResponse = _client.Search<File>(search => search
+            .Size(100)
+            .Query(query => query
+                .Match(match => match
+                    .Field(field => field.Emails)
+                    .Query(text)
+                )
+            )
+        );
+        return searchResponse.Documents.ToList();
+    }
 
     /**
      * Deletes all files currently in Elasticsearch
