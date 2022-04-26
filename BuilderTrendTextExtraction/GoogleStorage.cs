@@ -1,8 +1,5 @@
-﻿using System.Windows;
-using System.IO;
-using Capstone.UI;
+﻿using System.IO;
 using Google.Apis.Auth.OAuth2;
-using Nest;
 using Google.Cloud.Storage.V1;
 using Microsoft.WindowsAPICodePack.Shell;
 
@@ -28,6 +25,7 @@ public class GoogleStorage
             Client.UploadObject(BucketName, objectName, null, f);
         }
     }
+    
     
     public void AddFiles(List<File> filePaths)
     {

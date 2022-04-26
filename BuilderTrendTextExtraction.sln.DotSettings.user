@@ -7,4 +7,9 @@
     &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.FileTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.FileIDTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9da1c548_002D538c_002D4270_002D916c_002Db25ace14cd86/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ExtractionTime" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::D0767C4C-B5A7-4539-8492-84D48CF1166C::.NETFramework,Version=v4.8::Capstone.TextExtractionTests.TextExtractionTest.ExtractionTime&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

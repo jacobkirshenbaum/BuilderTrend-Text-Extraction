@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9WXYYUUy4zDmtbtExGF4qWD4GX73o06o57lqFch8EM4VC4/Sc1PZkuQJxfX0K58hj9I58mQQInIhCgRuGn5M9w==",
+  "dgSpecHash": "NHxHh5Feks55Y23PcG7C2Ma+WGC5gHlMlJtPcSXsMjZedTlTx7rIGPnIDm0a4g10OwrkW9UhBBZnUfMcWx83zA==",
   "success": true,
   "projectFilePath": "C:\\Users\\jakek\\RiderProjects\\Capstone\\BuilderTrendTextExtraction\\BuilderTrendTextExtraction.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\jakek\\.nuget\\packages\\google.apis.core\\1.57.0\\google.apis.core.1.57.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\google.apis.storage.v1\\1.55.0.2526\\google.apis.storage.v1.1.55.0.2526.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\google.cloud.storage.v1\\3.7.0\\google.cloud.storage.v1.3.7.0.nupkg.sha512",
+    "C:\\Users\\jakek\\.nuget\\packages\\groupdocs.parser\\22.2.0\\groupdocs.parser.22.2.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\ikvm\\8.1.5717\\ikvm.8.1.5717.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\jakek\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",

@@ -107,7 +107,7 @@ public class ElasticAccess
         );
         return searchResponse.Documents.ToList();
     }
-    
+   
     /**
      * Returns the list of first 100 files currently in Elasticsearch that contain the given address
      */

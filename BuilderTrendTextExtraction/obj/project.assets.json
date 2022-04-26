@@ -133,6 +133,15 @@
           "lib/net461/Google.Cloud.Storage.V1.dll": {}
         }
       },
+      "GroupDocs.Parser/22.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/GroupDocs.Parser.dll": {}
+        },
+        "runtime": {
+          "lib/net20/GroupDocs.Parser.dll": {}
+        }
+      },
       "IKVM/8.1.5717": {
         "type": "package",
         "compile": {
@@ -1436,6 +1445,15 @@
           "lib/net461/Google.Cloud.Storage.V1.dll": {}
         }
       },
+      "GroupDocs.Parser/22.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net20/GroupDocs.Parser.dll": {}
+        },
+        "runtime": {
+          "lib/net20/GroupDocs.Parser.dll": {}
+        }
+      },
       "IKVM/8.1.5717": {
         "type": "package",
         "compile": {
@@ -2651,6 +2669,26 @@
         "lib/netstandard2.0/Google.Cloud.Storage.V1.dll",
         "lib/netstandard2.0/Google.Cloud.Storage.V1.pdb",
         "lib/netstandard2.0/Google.Cloud.Storage.V1.xml"
+      ]
+    },
+    "GroupDocs.Parser/22.2.0": {
+      "sha512": "mRxOCKdpiFWwh7FHw3zVHodPS5VuTsKnhj+7xGrZa6ZI9TQsr0hDHHM0v+QS1jp4pNUrQdBdnOBOfJPEwZcQRA==",
+      "type": "package",
+      "path": "groupdocs.parser/22.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/app.config.install.xdt",
+        "content/app.config.uninstall.xdt",
+        "content/web.config.install.xdt",
+        "content/web.config.uninstall.xdt",
+        "groupdocs.parser.22.2.0.nupkg.sha512",
+        "groupdocs.parser.nuspec",
+        "lib/net20/GroupDocs.Parser.dll",
+        "lib/net20/GroupDocs.Parser.xml",
+        "lib/netstandard2.0/GroupDocs.Parser.dll",
+        "lib/netstandard2.0/GroupDocs.Parser.xml",
+        "license/license.txt"
       ]
     },
     "IKVM/8.1.5717": {
@@ -5493,6 +5531,7 @@
       "Docker.DotNet >= 3.125.5",
       "Google.Apis.Auth >= 1.57.0",
       "Google.Cloud.Storage.V1 >= 3.7.0",
+      "GroupDocs.Parser >= 22.2.0",
       "Microsoft.NETFramework.ReferenceAssemblies >= 1.0.2",
       "Microsoft.Windows.Compatibility >= 6.0.2-mauipre.1.22054.8",
       "Microsoft.WindowsAPICodePack.Shell >= 1.1.0",
@@ -5555,6 +5594,10 @@
           "Google.Cloud.Storage.V1": {
             "target": "Package",
             "version": "[3.7.0, )"
+          },
+          "GroupDocs.Parser": {
+            "target": "Package",
+            "version": "[22.2.0, )"
           },
           "Microsoft.NETFramework.ReferenceAssemblies": {
             "suppressParent": "All",

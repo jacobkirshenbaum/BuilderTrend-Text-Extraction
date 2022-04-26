@@ -118,3 +118,4 @@ C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.WindowsAPICodePack.dll
 C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\jakek\RiderProjects\Capstone\BuilderTrendTextExtraction\bin\Debug\net48\GroupDocs.Parser.dll

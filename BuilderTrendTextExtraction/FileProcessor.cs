@@ -2,7 +2,7 @@
 
 using System.IO;
 using System.Text.RegularExpressions;
-using Capstone.TextExtractionTests;
+using GroupDocs.Parser;
 using TikaOnDotNet.TextExtraction;
 using Tesseract;
 
@@ -10,12 +10,10 @@ public class FileProcessor
 {
     private TextExtractor _textExtractor;
     private DirectoryInfo _directoryInfo;
-    private GoogleStorage _googleStorage;
 
     public FileProcessor()
     {
         _textExtractor = new TextExtractor();
-        _googleStorage = new();
     }
 
     /**
@@ -46,7 +44,6 @@ public class FileProcessor
                                 PhoneNumbers = getFilteredItems(page.GetText(), "phone"),
                                 Emails = getFilteredItems(page.GetText(), "email")
                             };
-                            _googleStorage.AddFile(file.FullName);
                             files.Add(document);
                         }
                     }
@@ -63,7 +60,6 @@ public class FileProcessor
                         PhoneNumbers = getFilteredItems(contents.Text, "phone"),
                         Emails = getFilteredItems(contents.Text, "email")
                     };
-                    _googleStorage.AddFile(file.FullName);
                     files.Add(document);
                 }
             }
@@ -96,7 +92,6 @@ public class FileProcessor
                             PhoneNumbers = getFilteredItems(page.GetText(), "phone"),
                             Emails = getFilteredItems(page.GetText(), "email")
                         };
-                        _googleStorage.AddFile(filePath);
                         files.Add(document);
                     }
                 }
@@ -113,7 +108,6 @@ public class FileProcessor
                     PhoneNumbers = getFilteredItems(contents.Text, "phone"),
                     Emails = getFilteredItems(contents.Text, "email")
                 };
-                _googleStorage.AddFile(filePath);
                 files.Add(document);
             }
         }
@@ -141,8 +135,31 @@ public class FileProcessor
         {
             items.Add(match.Value);
         }
-
         return items;
+    }
+
+    public List<File> ReadFilesAlternative(String[] filePaths)
+    {
+        List<File> files = new();
+        foreach (var filePath in filePaths)
+        {
+            Parser parser = new Parser(filePath);
+            using (TextReader reader = parser.GetText())
+            {
+                var contents = reader.ReadToEnd();
+                var document = new File()
+                {
+                    ID = FileID.newId(),
+                    FileName = Path.GetFileName(filePath),
+                    Text = contents,
+                    Addresses = getFilteredItems(contents, "address"),
+                    PhoneNumbers = getFilteredItems(contents, "phone"),
+                    Emails = getFilteredItems(contents, "email")
+                };
+                files.Add(document);
+            }
+        }
+        return files;
     }
 
 }

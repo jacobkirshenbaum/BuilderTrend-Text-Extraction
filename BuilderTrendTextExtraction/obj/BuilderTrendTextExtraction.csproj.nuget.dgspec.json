@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[3.7.0, )"
             },
+            "GroupDocs.Parser": {
+              "target": "Package",
+              "version": "[22.2.0, )"
+            },
             "Microsoft.NETFramework.ReferenceAssemblies": {
               "suppressParent": "All",
               "target": "Package",
