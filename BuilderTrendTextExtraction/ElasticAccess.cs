@@ -4,16 +4,29 @@ using Nest;
 
 using ConfigurationManager = System.Configuration.ConfigurationManager;
 
+/**
+ * Manages the connection with ElasticSearch. Performs all operations that
+ * are related to ElasticSearch including indexing files and performing queries
+ * to find files in Elasticsearch that satisfy a condition.
+ */
 public class ElasticAccess
 {
+    /**
+     * The Elasticsearch client that handles the connection with ElasticSearch.
+     */
     private IElasticClient _client;
+    
+    /**
+     * Creates an ElasticAccess object.
+     */
     public ElasticAccess()
     {
         _client = Client();
     }
     
     /**
-     * Creates Elasticsearch client
+     * Creates Elasticsearch client.
+     * @return Returns the new Elasticsearch client.
      */
     public ElasticClient Client()
     {
@@ -24,7 +37,8 @@ public class ElasticAccess
     }
 
     /**
-     * Indexes a single file into Elasticsearch
+     * Indexes a single file into Elasticsearch.
+     * @param file The file to be indexed.
      */
     public void IndexDocument(File file)
     {
@@ -32,7 +46,8 @@ public class ElasticAccess
     }
 
     /**
-     * Indexes a list of files into Elasticsearch
+     * Indexes a list of files into Elasticsearch.
+     * @param files A list of files to be indexed.
      */
     public void IndexDocuments(List<File> files)
     {
@@ -43,7 +58,8 @@ public class ElasticAccess
     }
 
     /**
-     * Returns list of first 100 files currently in Elasticsearch
+     * Returns the first 100 files currently in Elasticsearch.
+     * @return Returns a list of the first 100 files in Elasticsearch.
      */
     public List<File> SearchAll()
     {
@@ -55,7 +71,10 @@ public class ElasticAccess
     }
 
     /**
-     * Returns list of first 100 files currently in Elasticsearch who's file names contain the given file name 
+     * Finds the files in Elasticsearch that have the given file name.
+     * @param fileName The name of a file to search for.
+     * @return Returns list of first 100 files currently in Elasticsearch whose file
+     *         names contain the given file name.
      */
     public List<File> SearchByName(string fileName)
     {
@@ -72,7 +91,9 @@ public class ElasticAccess
     }
 
     /**
-     * Returns the list of first 100 files currently in Elasticsearch that contain the given text
+     * Finds the files in Elasticsearch that contain the given substring in their text.
+     * @param text A substring to search for.
+     * @return Returns the list of first 100 files currently in Elasticsearch that contain the given text.
      */
     public List<File> SearchByText(string text)
     {
@@ -89,7 +110,9 @@ public class ElasticAccess
     }
     
     /**
-     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     * Finds the files in Elasticsearch that contain the given US postal address.
+     * @param text An address to search for.
+     * @return Returns the list of first 100 files currently in Elasticsearch that contain the given address.
      */
     public List<File> SearchByAddress(string text)
     {
@@ -109,7 +132,9 @@ public class ElasticAccess
     }
    
     /**
-     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     * Finds the files in Elasticsearch that contain the given phone number.
+     * @param text A phone number to search for.
+     * @return Returns the list of first 100 files currently in Elasticsearch that contain the given address.
      */
     public List<File> SearchByPhone(string text)
     {
@@ -126,7 +151,9 @@ public class ElasticAccess
     }
     
     /**
-     * Returns the list of first 100 files currently in Elasticsearch that contain the given address
+     * Finds the files in Elasticsearch that contain the given email address.
+     * @param text An email address to search for.
+     * @return Returns the list of first 100 files currently in Elasticsearch that contain the given address
      */
     public List<File> SearchByEmail(string text)
     {
@@ -143,7 +170,7 @@ public class ElasticAccess
     }
 
     /**
-     * Deletes all files currently in Elasticsearch
+     * Deletes all files currently in Elasticsearch.
      */
     public void DeleteAll()
     {
