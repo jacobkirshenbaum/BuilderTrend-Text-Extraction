@@ -9,7 +9,7 @@ to extract text from up to 100 files. Along with that, it can put this text into
 so that it may be searched for at a later time. There is also the ability to upload and download 
 the files to and from Google Cloud Storage.
 
-#Installation/Running:
+#Installation:
 To run this application, you just have to run the Program.cs file. This will open up the user
 interface and allow you to use any of the functionalities mentioned above. For it to work properly
 you will need the Google Cloud service account credentials file to access the files we currently 
