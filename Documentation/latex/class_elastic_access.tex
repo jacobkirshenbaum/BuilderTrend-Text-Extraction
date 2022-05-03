@@ -1,0 +1,175 @@
+\hypertarget{class_elastic_access}{}\doxysection{Elastic\+Access Class Reference}
+\label{class_elastic_access}\index{ElasticAccess@{ElasticAccess}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_elastic_access_a422eed2f74e3f95206f39c0ded6678fe}{Elastic\+Access}} ()
+\item 
+Elastic\+Client \mbox{\hyperlink{class_elastic_access_a1b9ac1d2f63f0753bb72bb340b58fae4}{Client}} ()
+\item 
+void \mbox{\hyperlink{class_elastic_access_a64f0588c7c8c89302f2b539af440d632}{Index\+Document}} (\mbox{\hyperlink{class_file}{File}} file)
+\item 
+void \mbox{\hyperlink{class_elastic_access_ad2c2233c2c08eaf21a88f2200b499577}{Index\+Documents}} (List$<$ \mbox{\hyperlink{class_file}{File}} $>$ files)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_a35bf748ead6f53f9fa14ce85d531a487}{Search\+All}} ()
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_aa0aeb8ca3fce7ab2309d296e6743d5d0}{Search\+By\+Name}} (string file\+Name)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_a4d010ea3c1b6dffc5ed9f1d97948e9d5}{Search\+By\+Text}} (string text)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_ade126e210771c2fe0110ba3c0da80a5e}{Search\+By\+Address}} (string text)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_ac0ba9dbd0484f13ac3794389db00a42e}{Search\+By\+Phone}} (string text)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_elastic_access_a1ebc0d56a031dc6d036785f459997a0a}{Search\+By\+Email}} (string text)
+\item 
+void \mbox{\hyperlink{class_elastic_access_ab9a20b5ed428e63f1701d2ad28639b37}{Delete\+All}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the connection with Elastic\+Search. Performs all operations that are related to Elastic\+Search including indexing files and performing queries to find files in Elasticsearch that satisfy a condition. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_elastic_access_a422eed2f74e3f95206f39c0ded6678fe}\label{class_elastic_access_a422eed2f74e3f95206f39c0ded6678fe}} 
+\index{ElasticAccess@{ElasticAccess}!ElasticAccess@{ElasticAccess}}
+\index{ElasticAccess@{ElasticAccess}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{ElasticAccess()}{ElasticAccess()}}
+{\footnotesize\ttfamily Elastic\+Access.\+Elastic\+Access (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates an \mbox{\hyperlink{class_elastic_access}{Elastic\+Access}} object. 
+
+References \mbox{\hyperlink{class_elastic_access_a1b9ac1d2f63f0753bb72bb340b58fae4}{Client()}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_elastic_access_a1b9ac1d2f63f0753bb72bb340b58fae4}\label{class_elastic_access_a1b9ac1d2f63f0753bb72bb340b58fae4}} 
+\index{ElasticAccess@{ElasticAccess}!Client@{Client}}
+\index{Client@{Client}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Elastic\+Client Elastic\+Access.\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates Elasticsearch client. \begin{DoxyReturn}{Returns}
+Returns the new Elasticsearch client. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{class_elastic_access_a422eed2f74e3f95206f39c0ded6678fe}{Elastic\+Access()}}.
+
+\mbox{\Hypertarget{class_elastic_access_ab9a20b5ed428e63f1701d2ad28639b37}\label{class_elastic_access_ab9a20b5ed428e63f1701d2ad28639b37}} 
+\index{ElasticAccess@{ElasticAccess}!DeleteAll@{DeleteAll}}
+\index{DeleteAll@{DeleteAll}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{DeleteAll()}{DeleteAll()}}
+{\footnotesize\ttfamily void Elastic\+Access.\+Delete\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Deletes all files currently in Elasticsearch. \mbox{\Hypertarget{class_elastic_access_a64f0588c7c8c89302f2b539af440d632}\label{class_elastic_access_a64f0588c7c8c89302f2b539af440d632}} 
+\index{ElasticAccess@{ElasticAccess}!IndexDocument@{IndexDocument}}
+\index{IndexDocument@{IndexDocument}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{IndexDocument()}{IndexDocument()}}
+{\footnotesize\ttfamily void Elastic\+Access.\+Index\+Document (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_file}{File}}}]{file }\end{DoxyParamCaption})}
+
+Indexes a single file into Elasticsearch. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file to be indexed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_elastic_access_ad2c2233c2c08eaf21a88f2200b499577}\label{class_elastic_access_ad2c2233c2c08eaf21a88f2200b499577}} 
+\index{ElasticAccess@{ElasticAccess}!IndexDocuments@{IndexDocuments}}
+\index{IndexDocuments@{IndexDocuments}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{IndexDocuments()}{IndexDocuments()}}
+{\footnotesize\ttfamily void Elastic\+Access.\+Index\+Documents (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{class_file}{File}} $>$}]{files }\end{DoxyParamCaption})}
+
+Indexes a list of files into Elasticsearch. 
+\begin{DoxyParams}{Parameters}
+{\em files} & A list of files to be indexed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_elastic_access_a35bf748ead6f53f9fa14ce85d531a487}\label{class_elastic_access_a35bf748ead6f53f9fa14ce85d531a487}} 
+\index{ElasticAccess@{ElasticAccess}!SearchAll@{SearchAll}}
+\index{SearchAll@{SearchAll}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchAll()}{SearchAll()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the first 100 files currently in Elasticsearch. \begin{DoxyReturn}{Returns}
+Returns a list of the first 100 files in Elasticsearch. 
+\end{DoxyReturn}
+
+
+Referenced by \mbox{\hyperlink{class_main_window_af607d50e4d1b04d3c494661489283f45}{Main\+Window.\+Main\+Window()}}.
+
+\mbox{\Hypertarget{class_elastic_access_ade126e210771c2fe0110ba3c0da80a5e}\label{class_elastic_access_ade126e210771c2fe0110ba3c0da80a5e}} 
+\index{ElasticAccess@{ElasticAccess}!SearchByAddress@{SearchByAddress}}
+\index{SearchByAddress@{SearchByAddress}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchByAddress()}{SearchByAddress()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+By\+Address (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Finds the files in Elasticsearch that contain the given US postal address. 
+\begin{DoxyParams}{Parameters}
+{\em text} & An address to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the list of first 100 files currently in Elasticsearch that contain the given address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elastic_access_a1ebc0d56a031dc6d036785f459997a0a}\label{class_elastic_access_a1ebc0d56a031dc6d036785f459997a0a}} 
+\index{ElasticAccess@{ElasticAccess}!SearchByEmail@{SearchByEmail}}
+\index{SearchByEmail@{SearchByEmail}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchByEmail()}{SearchByEmail()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+By\+Email (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Finds the files in Elasticsearch that contain the given email address. 
+\begin{DoxyParams}{Parameters}
+{\em text} & An email address to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the list of first 100 files currently in Elasticsearch that contain the given address 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elastic_access_aa0aeb8ca3fce7ab2309d296e6743d5d0}\label{class_elastic_access_aa0aeb8ca3fce7ab2309d296e6743d5d0}} 
+\index{ElasticAccess@{ElasticAccess}!SearchByName@{SearchByName}}
+\index{SearchByName@{SearchByName}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchByName()}{SearchByName()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+By\+Name (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+
+Finds the files in Elasticsearch that have the given file name. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of a file to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns list of first 100 files currently in Elasticsearch whose file names contain the given file name. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elastic_access_ac0ba9dbd0484f13ac3794389db00a42e}\label{class_elastic_access_ac0ba9dbd0484f13ac3794389db00a42e}} 
+\index{ElasticAccess@{ElasticAccess}!SearchByPhone@{SearchByPhone}}
+\index{SearchByPhone@{SearchByPhone}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchByPhone()}{SearchByPhone()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+By\+Phone (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Finds the files in Elasticsearch that contain the given phone number. 
+\begin{DoxyParams}{Parameters}
+{\em text} & A phone number to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the list of first 100 files currently in Elasticsearch that contain the given address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_elastic_access_a4d010ea3c1b6dffc5ed9f1d97948e9d5}\label{class_elastic_access_a4d010ea3c1b6dffc5ed9f1d97948e9d5}} 
+\index{ElasticAccess@{ElasticAccess}!SearchByText@{SearchByText}}
+\index{SearchByText@{SearchByText}!ElasticAccess@{ElasticAccess}}
+\doxysubsubsection{\texorpdfstring{SearchByText()}{SearchByText()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ Elastic\+Access.\+Search\+By\+Text (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+Finds the files in Elasticsearch that contain the given substring in their text. 
+\begin{DoxyParams}{Parameters}
+{\em text} & A substring to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the list of first 100 files currently in Elasticsearch that contain the given text. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_elastic_access_8cs}{Elastic\+Access.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\hypertarget{class_file_processor}{}\doxysection{File\+Processor Class Reference}
+\label{class_file_processor}\index{FileProcessor@{FileProcessor}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_processor_a41a8f83b16ba9948fc1905b68fe5b0d9}{File\+Processor}} ()
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_file_processor_a2d8570bc14986e1e314538ef1d7f5920}{Read\+Files}} (String file\+Path)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_file_processor_a80b876cb4628e84849820c60308de0b6}{Read\+File}} (String\mbox{[}$\,$\mbox{]} file\+Paths)
+\item 
+List$<$ \mbox{\hyperlink{class_file}{File}} $>$ \mbox{\hyperlink{class_file_processor_afc7cd97c0cbab008543e01857f57576f}{Read\+Files\+Alternative}} (String\mbox{[}$\,$\mbox{]} file\+Paths)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for processing files. It extracts text out of the files using Apache\+Tika, Tesseract, or Group\+Docs and stores the relevant data in \mbox{\hyperlink{class_file}{File}} objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_file_processor_a41a8f83b16ba9948fc1905b68fe5b0d9}\label{class_file_processor_a41a8f83b16ba9948fc1905b68fe5b0d9}} 
+\index{FileProcessor@{FileProcessor}!FileProcessor@{FileProcessor}}
+\index{FileProcessor@{FileProcessor}!FileProcessor@{FileProcessor}}
+\doxysubsubsection{\texorpdfstring{FileProcessor()}{FileProcessor()}}
+{\footnotesize\ttfamily File\+Processor.\+File\+Processor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates a \mbox{\hyperlink{class_file_processor}{File\+Processor}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_file_processor_a80b876cb4628e84849820c60308de0b6}\label{class_file_processor_a80b876cb4628e84849820c60308de0b6}} 
+\index{FileProcessor@{FileProcessor}!ReadFile@{ReadFile}}
+\index{ReadFile@{ReadFile}!FileProcessor@{FileProcessor}}
+\doxysubsubsection{\texorpdfstring{ReadFile()}{ReadFile()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ File\+Processor.\+Read\+File (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{file\+Paths }\end{DoxyParamCaption})}
+
+Returns file that can be put into Elasticsearch. It extracts text from the given file with the appropriate tool (Tesseract for files with .jpg extension and Apache\+Tika for everything else), and stores the data in a \mbox{\hyperlink{class_file}{File}} object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The file path of the file that is being processed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a single \mbox{\hyperlink{class_file}{File}} object storing the relevant data for a single file. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{class_file_i_d_a0cdd022f969cf35fc8a0afbd587574f8}{File\+ID.\+new\+Id()}}.
+
+\mbox{\Hypertarget{class_file_processor_a2d8570bc14986e1e314538ef1d7f5920}\label{class_file_processor_a2d8570bc14986e1e314538ef1d7f5920}} 
+\index{FileProcessor@{FileProcessor}!ReadFiles@{ReadFiles}}
+\index{ReadFiles@{ReadFiles}!FileProcessor@{FileProcessor}}
+\doxysubsubsection{\texorpdfstring{ReadFiles()}{ReadFiles()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ File\+Processor.\+Read\+Files (\begin{DoxyParamCaption}\item[{String}]{file\+Path }\end{DoxyParamCaption})}
+
+Returns list of files that can be put into Elasticsearch. For each file in the given directory, it extracts text from the file with the appropriate tool (Tesseract for files with .jpg extension and Apache\+Tika for everything else), and stores the data in a \mbox{\hyperlink{class_file}{File}} object, and adds that file object to the output list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & The filepath of the directory that is being processed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a list of \mbox{\hyperlink{class_file}{File}} objects, each storing the relevant data for a single file in the given directory. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{class_file_i_d_a0cdd022f969cf35fc8a0afbd587574f8}{File\+ID.\+new\+Id()}}.
+
+\mbox{\Hypertarget{class_file_processor_afc7cd97c0cbab008543e01857f57576f}\label{class_file_processor_afc7cd97c0cbab008543e01857f57576f}} 
+\index{FileProcessor@{FileProcessor}!ReadFilesAlternative@{ReadFilesAlternative}}
+\index{ReadFilesAlternative@{ReadFilesAlternative}!FileProcessor@{FileProcessor}}
+\doxysubsubsection{\texorpdfstring{ReadFilesAlternative()}{ReadFilesAlternative()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_file}{File}} $>$ File\+Processor.\+Read\+Files\+Alternative (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{file\+Paths }\end{DoxyParamCaption})}
+
+Reads the files using Group\+Docs and returns a list of the resulting \mbox{\hyperlink{class_file}{File}} objects. For each given file path, it extracts the text using the Group\+Docs tool, creates a file object to store the data, and adds it to the output list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Paths} & An array of file paths to be processed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns a List of file objects, where each file object stores the data of a single file. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{class_file_i_d_a0cdd022f969cf35fc8a0afbd587574f8}{File\+ID.\+new\+Id()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_file_processor_8cs}{File\+Processor.\+cs}}\end{DoxyCompactItemize}
