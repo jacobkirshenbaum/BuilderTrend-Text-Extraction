@@ -25,8 +25,6 @@ class Program
     [STAThread]
     static void Main(string[] args)
     {
-        GoogleStorage storage = new();
-        storage.DownloadFile("google-cloud-credentials.json");
         MainWindow main = new();
         Application app = new Application();
         app.Run(main);
